@@ -39,8 +39,8 @@ function main() {
     }
     
 
-// create charts, pass variables into it, many which have pass functions which will call below.
-//we are creating  data from mockData, parsing through it to return data pertinent to this chart
+//OOP: below we create 3 chart objects, pass properties into it, many which pass methods to retreive data.
+//we are parsing through data in mockData.js to return the data we want to display for each chart
     new Chart(timeChartCanvas.getContext('2d'), {
         type: 'line',
         data: {
@@ -83,7 +83,7 @@ function main() {
     });
 
 
-    //use for.each method to parse through our code, and return the highest in the array that each stock got to
+    //use for.each method to parse through our code, and return the highest value in the array that each stock got to
     function findHighestValue(values){
         let highestNumber = values[0].high;
         values.forEach((value) => {
@@ -96,7 +96,6 @@ function main() {
 
 
     //ignore all this below. too far behind to worry about figuring out bonus -
-    //this wa
 
     
     // function findAverage(values){
